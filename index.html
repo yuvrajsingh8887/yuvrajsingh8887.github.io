@@ -9,16 +9,19 @@
 
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <div class="nav-toggle" onclick="toggleNav()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id="nav-links">
+          <li><a href="javascript:void(0)" onclick="scrollToSection('home-section')">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="scrollToSection('about-section')">About</a></li>
+          <li><a href="javascript:void(0)" onclick="scrollToSection('skills-section')">Skills</a></li>
+          <li><a href="javascript:void(0)" onclick="scrollToSection('experience-section')">Experience</a></li>
+          <li><a href="javascript:void(0)" onclick="scrollToSection('education-section')">Education</a></li>
+          <li><a href="javascript:void(0)" onclick="scrollToSection('contact-section')">Contact</a></li>
+        </ul>
+      </nav>
 
   <div id="content">
     <section id="home-section">
@@ -26,15 +29,15 @@
         <p>Hello! I'm Yuvraj Singh. <br> This is the home section of my portfolio website. Feel free to explore!
         <br></p>
         <div class="social-icons">
-          <a href="https://www.linkedin.com/yourprofile" target="_blank"><img src="./images/link.png" alt="LinkedIn"></a>
-          <a href="https://www.instagram.com/yourprofile" target="_blank"><img src="./images/insta.jpeg" alt="Twitter"></a>
-          <a href="https://www.github.com/yourprofile" target="_blank"><img src="./images/git.jpeg" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/yuvraj-singh-375a1a24b" target="_blank"><img src="./images/link.png" alt="LinkedIn"></a>
+          <a href="https://www.instagram.com/itz_yuvi_uv_" target="_blank"><img src="./images/insta.jpeg" alt="Twitter"></a>
+          <a href="https://www.github.com/yuvrajsingh8887" target="_blank"><img src="./images/git.jpeg" alt="GitHub"></a>
         </div>
       </section>
 
       <section id="about-section">
         <h2>About Me</h2>
-        <p>Hello, I'm [Your Name], a web developer passionate about creating amazing user experiences.</p>
+        <p>Hello, I'm Yuvraj Singh, a web developer passionate about creating amazing user experiences.</p>
       </section>
 
       <section id="skills-section">
@@ -46,6 +49,90 @@
           <!-- Add more skills as needed -->
         </ul>
       </section>
+
+      <section id="experience-section">
+        <h2>Experience</h2>
+        <div class="experience-item">
+          <div class="experience-details">
+            <p class="experience-title">Job Oriented Value Added Course, GLA University, Mathura</p>
+            <p class="experience-date">June 2023 – July 2023</p>
+            <p class="experience-description">
+              Full Stack Web Development <br>
+              Learnt basics of HTML, CSS and JavaScript <br>
+              Post completing the training, created a Project named “E-commerce Website”, by using JavaScript.
+            </p>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-details">
+            <p class="experience-title">Internshala</p>
+            <p class="experience-date">Aug 2023 – Sep 2023</p>
+            <p class="experience-description">
+              Data Structure and Algorithms <br>
+              Learnt basics of data structure like linked list, stack, queues, etc. <br>
+              Participated in the requirement gathering and prototype building process of software development.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="education-section">
+        <h2>Education</h2>
+        <ul class="education-list">
+          <li>
+            <div class="education-details">
+              <p class="education-title">Bachelor of Technology in Computer Science</p>
+              <p class="education-institution">GLA University, Mathura</p>
+              <p class="education-date">June 2025</p>
+            </div>
+          </li>
+          <li>
+            <div class="education-details">
+              <p class="education-title">Intermediate</p>
+              <p class="education-institution">Shri Vinayak Acad, Orai</p>
+              <p class="education-date">May 2021</p>
+            </div>
+          </li>
+          <li>
+            <div class="education-details">
+              <p class="education-title">High School</p>
+              <p class="education-institution">Shri Vinayak Acad, Orai</p>
+              <p class="education-date">May 2019</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      
+      
+      <section id="contact-section">
+        <h2>Contact Me!</h2>
+        <div class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your email">
+      
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Your message"></textarea>
+      
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      
+        <div id="display-message"></div>
+
+<br><br><br><br><br><br>
+
+
+        <div class="social-icons">
+            <a href="www.linkedin.com/in/yuvraj-singh-375a1a24b" target="_blank"><img src="./images/link.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/itz_yuvi_uv_" target="_blank"><img src="./images/insta.jpeg" alt="Twitter"></a>
+            <a href="https://github.com/yuvrajsingh8887" target="_blank"><img src="./images/git.jpeg" alt="GitHub"></a>
+          </div>
+      </section>
+      
+      
       
       
   

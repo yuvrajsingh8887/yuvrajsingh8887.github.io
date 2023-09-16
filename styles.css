@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 body, h1, h2, p {
   margin: 0;
   padding: 0;
@@ -11,13 +11,16 @@ body {
   background-repeat: no-repeat;
 }
 
+
+
 nav {
-  background-color: #000;
+  background-color: black; 
   position: fixed;
   width: 100%;
   top: 0;
   display: flex;
-  justify-content: space-around; /* Align items with equal spacing */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
 }
 
 ul {
@@ -26,6 +29,78 @@ ul {
   margin: 0;
   display: flex;
 }
+
+li {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+a:hover {
+  background-color: #555; /* Darken the background on hover */
+}
+
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+}
+
+.contact-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+}
+
+
+/* Add more styles as needed */
+
+/* Responsive navigation styles */
+@media (max-width: 600px) {
+  nav {
+    padding: 10px;
+  }
+  
+  ul {
+    flex-direction: column;
+  }
+  
+  li {
+    padding: 10px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 li {
   text-align: center;
@@ -42,6 +117,10 @@ a {
 a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+
+
+
 
 #content {
   padding-top: 50px; /* Adjust the padding based on the height of the navigation bar */
@@ -125,37 +204,252 @@ a:hover {
 
 
 
-
 /* Additional styles for the Skills section */
 #skills-section {
-  padding: 50px;
-  background-color: #f9f9f9; /* Background color for the skills section */
-  color: #333; /* Text color for the skills section */
+  padding: 30px;
+  margin: 20px 0;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-  margin-top: 20px; /* Add some space between sections */
 }
-
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 #skills-section h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #555; /* Heading color */
+  color: #333;
 }
 
-#skills-section ul {
+.skills-list {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#skills-section li {
-  font-size: 18px;
+.skills-list li {
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the skill items are centered within each list item */
+.skills-list li {
+  display: inline-block;
+  text-align: center;
+  width: 150px; /* Adjust the width as needed */
+}
+
+
+
+
+
+
+
+
+/* Additional styles for the Experience section */
+#experience-section {
+  padding: 30px;
+  margin: 20px 0;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#experience-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.experience-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Display content in a column */
+  align-items: center; /* Center horizontally */
+}
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.experience-details {
+  color: #333;
+  width: 70%; /* Adjust width as needed */
+}
+
+.experience-title {
+  font-size: 20px;
   margin-bottom: 10px;
+  color: #ff6b6b;
 }
 
-/* Add a simple hover effect for skills */
-#skills-section li:hover {
-  color: #ff6600; /* Change color on hover */
+.experience-date {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #4CAF50;
+  float: right; /* Float the date to the right */
+}
+
+.experience-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+/* Additional styles for the Experience section */
+
+
+
+
+
+
+
+
+/* Additional styles for the Education section */
+#education-section {
+  padding: 30px;
+  margin: 20px 0;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#education-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.education-list li {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the items */
+}
+
+.education-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.education-details {
+  color: #333;
+  text-align: center;
+}
+
+.education-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #ff6b6b;
+}
+
+.education-institution {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.education-date {
+  font-size: 16px;
+  color: #4CAF50;
+}
+
+
+
+
+
+
+
+
+
+
+/* Additional styles for the Contact section */
+#contact-section {
+  padding: 30px;
+  margin: 20px 0;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+}
+
+#display-message {
+  color: #333;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 20px;
 }
 
 
