@@ -1,44 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." />
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Portfolio</title>
 </head>
+
 <body>
-    <nav>
-        <div class="nav-toggle" onclick="toggleNav()">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul id="nav-links">
-          <li><a href="javascript:void(0)" onclick="scrollToSection('home-section')">Home</a></li>
-          <li><a href="javascript:void(0)" onclick="scrollToSection('about-section')">About</a></li>
-          <li><a href="javascript:void(0)" onclick="scrollToSection('skills-section')">Skills</a></li>
-          <li><a href="javascript:void(0)" onclick="scrollToSection('experience-section')">Experience</a></li>
-          <li><a href="javascript:void(0)" onclick="scrollToSection('education-section')">Education</a></li>
-          <li><a href="javascript:void(0)" onclick="scrollToSection('contact-section')">Contact</a></li>
-        </ul>
-      </nav>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#"><img src="./images/uvlogo2.jpg" alt="Logo"></a>
+            </div>
+            
+            <input type="checkbox" id="click">
 
-  <div id="content">
-    <section id="home-section">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hello! I'm Yuvraj Singh. <br> This is the home section of my portfolio website. Feel free to explore!
-        <br></p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/yuvraj-singh-375a1a24b" target="_blank"><img src="./images/link.png" alt="LinkedIn"></a>
-          <a href="https://www.instagram.com/peeyush_yuvi" target="_blank"><img src="./images/insta.jpeg" alt="Twitter"></a>
-          <a href="https://www.github.com/peeyush_yuvi" target="_blank"><img src="./images/git.jpeg" alt="GitHub"></a>
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#home-section" class="active">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#experience-section">Experience</a></li>
+                <li><a href="#education-section">Education</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
         </div>
-      </section>
+    </header>
 
-      <section id="about-section">
+
+    <section class="container">
+        <div class="main">
+            <div class="detail">
+                <h3>Hi, It's Me</h3>
+                <h1>I'm <span style="color:#f9532d;">Yuvi</span></h1>
+                <p>I'm a professional Web Developer. Our Main Goal to help & Satisficed the Local & Global Clients by
+                    web development solutions
+                </p>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="./images/uv.jpg" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about-section">
         <h2>About Me</h2>
         <p>Hello, I'm Yuvraj Singh, a web developer passionate about creating amazing user experiences.</p>
-      </section>
+    </section>
+
+
 
       <section id="skills-section">
         <h2>Skills</h2>
@@ -46,9 +78,10 @@
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
-          <!-- Add more skills as needed -->
         </ul>
       </section>
+
+
 
       <section id="experience-section">
         <h2>Experience</h2>
@@ -76,7 +109,12 @@
         </div>
       </section>
 
-      
+
+
+
+
+
+
       <section id="education-section">
         <h2>Education</h2>
         <ul class="education-list">
@@ -103,8 +141,10 @@
           </li>
         </ul>
       </section>
-      
-      
+
+
+
+
       <section id="contact-section">
         <h2>Contact Me!</h2>
         <div class="contact-form">
@@ -122,23 +162,31 @@
       
         <div id="display-message"></div>
 
-<br><br><br><br><br><br>
 
 
-        <div class="social-icons">
-            <a href="www.linkedin.com/in/yuvraj-singh-375a1a24b" target="_blank"><img src="./images/link.png" alt="LinkedIn"></a>
-            <a href="https://www.instagram.com/itz_yuvi_uv_" target="_blank"><img src="./images/insta.jpeg" alt="Twitter"></a>
-            <a href="https://github.com/yuvrajsingh8887" target="_blank"><img src="./images/git.jpeg" alt="GitHub"></a>
-          </div>
-      </section>
-      
-      
-      
-      
-  
-      
-  </div>
 
-  <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
