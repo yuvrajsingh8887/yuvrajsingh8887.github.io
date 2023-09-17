@@ -1,78 +1,55 @@
-let messages = [];
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+const navItems = document.querySelectorAll('ul li a');
+const sections = document.querySelectorAll('.section');
 
-function sendMessage() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
 
-  const messageObject = {
-    name,
-    email,
-    message
-  };
-
-  messages.push(messageObject);
-
-  displayMessages();
+if (isDarkMode) {
+    body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+    sections.forEach(section => section.classList.add('dark-mode'));
+} else {
+    sections.forEach(section => section.classList.add('light-mode'));
 }
-
-function displayMessages() {
-  const displayMessage = document.getElementById('display-message');
-  displayMessage.innerHTML = messages.map((message, index) => `
-    <div class="message" key=${index}>
-      <strong>Name:</strong> ${message.name}<br>
-      <strong>Email:</strong> ${message.email}<br>
-      <strong>Message:</strong> ${message.message}<br>
-    </div>
-    `).join('');
-}
-
 
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+        window.scrollTo({
+            top: section.offsetTop,
+            behavior: 'smooth'
+        });
     }
-  }
+}
 
-
-
-
-  function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 50, // Adjust for the fixed nav height
-        behavior: 'smooth'
-      });
+darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
+        body.classList.add('dark-mode');
+        sections.forEach(section => {
+            section.classList.remove('light-mode');
+            section.classList.add('dark-mode');
+        });
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        body.classList.remove('dark-mode');
+        sections.forEach(section => {
+            section.classList.remove('dark-mode');
+            section.classList.add('light-mode');
+        });
+        localStorage.setItem('darkMode', 'disabled');
     }
-  }
-  
-  function sendMessage() {
-    // Add your message sending logic here
-    alert('Message sent!');
-  }
-  
+});
 
+// Close the toggle when a nav item is clicked (for small screens)
+navItems.forEach(navItem => {
+    navItem.addEventListener('click', () => {
+        const clickToggle = document.getElementById('click');
+        if (window.innerWidth < 600) {
+            clickToggle.checked = false;
+        }
 
-
-  // Add your JavaScript code here
-
-function toggleNav() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-  }
-  
-  function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 50, // Adjust for the fixed nav height
-        behavior: 'smooth'
-      });
-      // Close the nav on small screens after a link is clicked
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.remove('active');
-    }
-  }
-  
+        const targetSectionId = navItem.getAttribute('href').substring(1);
+        scrollToSection(targetSectionId);
+    });
+});
