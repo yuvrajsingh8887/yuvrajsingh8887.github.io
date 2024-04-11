@@ -1,192 +1,269 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuvi's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
-    <header class="container">
-        <div class="page-header">
-            <div class="logo">
-                <a href="#"><img src="./images/uvlogo2.jpg" alt="Logo"></a>
-            </div>
-            
-            <input type="checkbox" id="click">
+  <nav id="desktop-nav">
+    <div class="logo">YUVI UV</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">YUVI UV</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img style="border-radius: 40%;" src="./assets/profic-pic-1.JPG" alt="John Doe profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Yuvraj Singh</h1>
+      <p class="section__text__p2">Full Stack Web Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/yuvi_resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" class="icon"
+          onclick="location.href='http://www.linkedin.com/in/yuvraj-singh-375a1a24b'" />
+        <img src="./assets/github.png" class="icon" onclick="location.href='https://github.com/yuvrajsingh8887'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.jpeg" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" class="icon" />
+            <h3>Experience</h3>
+            <br>
+            <p>
+            <h4>Coding Blocks</h4>Full Stack Web Development</p>
+            <br>
+            <p>
+            <h4>Internshala</h4> Data Structure and Algorithms</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <br>
+            <p>
+            <h4>Graduation</h4>Bachelor of Technology in Computer Science<br /></p><br>
+            <p>
+            <h4>High School</h4> Shri Vinayak Acad, Orai</p><br>
+            <p>
+            <h4>Intermediate</h4> Shri Vinayak Acad, Orai</p>
 
-            <label for="click" class="mainicon">
-                <div class="menu">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </label>
-            <ul>
-                <li><a href="#home-section" class="active">Home</a></li>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#skills-section">Skills</a></li>
-                <li><a href="#experience-section">Experience</a></li>
-                <li><a href="#education-section">Education</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </ul>
-            <label class="mode">
-                <input type="checkbox" id="darkModeToggle">
-                <i class='bx bxs-moon'></i>
-            </label>
-        </div>
-    </header>
-
-
-    <section class="container">
-        <div class="main">
-            <div class="detail">
-                <h3>Hi, It's Me</h3>
-                <h1>I'm <span style="color:#f9532d;">Yuvi</span></h1>
-                <p>I'm a professional Web Developer. Our Main Goal to help & Satisfied the Local & Global Clients by
-                    web development solutions
-                </p>
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/yuvraj-singh-375a1a24b"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/peeyush_yuvi"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://www.github.com/"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
-                </div>
-            </div>
-            <div class="img-sec">
-                <div class="images">
-                    <img src="./images/uv.jpg" alt="" class="img-w">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="about-section">
-        <h2>About Me</h2>
-        <p>Hello, I'm Yuvraj Singh, a web developer passionate about creating amazing user experiences.</p>
-    </section>
-
-
-
-      <section id="skills-section">
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-      </section>
-
-
-
-      <section id="experience-section">
-        <h2>Experience</h2>
-        <div class="experience-item">
-          <div class="experience-details">
-            <p class="experience-title">Job Oriented Value Added Course, GLA University, Mathura</p>
-            <p class="experience-date">June 2023 – July 2023</p>
-            <p class="experience-description">
-              Full Stack Web Development <br>
-              Learnt basics of HTML, CSS and JavaScript <br>
-              Post completing the training, created a Project named “E-commerce Website”, by using JavaScript.
-            </p>
           </div>
         </div>
-        <div class="experience-item">
-          <div class="experience-details">
-            <p class="experience-title">Internshala</p>
-            <p class="experience-date">Aug 2023 – Sep 2023</p>
-            <p class="experience-description">
-              Data Structure and Algorithms <br>
-              Learnt basics of data structure like linked list, stack, queues, etc. <br>
-              Participated in the requirement gathering and prototype building process of software development.
-            </p>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" class="icon" />
+              <div>
+                <h3>Java</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" class="icon" />
+              <div>
+                <h3>C</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
           </div>
         </div>
-      </section>
-
-
-
-
-
-
-
-      <section id="education-section">
-        <h2>Education</h2>
-        <ul class="education-list">
-          <li>
-            <div class="education-details">
-              <p class="education-title">Bachelor of Technology in Computer Science</p>
-              <p class="education-institution">GLA University, Mathura</p>
-              <p class="education-date">June 2025</p>
-            </div>
-          </li>
-          <li>
-            <div class="education-details">
-              <p class="education-title">Intermediate</p>
-              <p class="education-institution">Shri Vinayak Acad, Orai</p>
-              <p class="education-date">May 2021</p>
-            </div>
-          </li>
-          <li>
-            <div class="education-details">
-              <p class="education-title">High School</p>
-              <p class="education-institution">Shri Vinayak Acad, Orai</p>
-              <p class="education-date">May 2019</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-
-
-
-      <section id="contact-section">
-        <h2>Contact Me!</h2>
-        <div class="contact-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your name">
-      
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Your email">
-      
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" placeholder="Your message"></textarea>
-      
-          <button onclick="sendMessage()">Send</button>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Node JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MongoDB</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" class="icon" />
+              <div>
+                <h3>React JS</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
         </div>
-      
-        <div id="display-message"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="script.js"></script>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project One</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Two</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" class="icon contact-icon email-icon" />
+        <p><a href="mailto:examplemail@gmail.com">yuvraj.singh.908486@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" class="icon contact-icon" />
+        <p><a href="http://www.linkedin.com/in/yuvraj-singh-375a1a24b">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <p>Copyright &#169; 2023 Yuvi. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
